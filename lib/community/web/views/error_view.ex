@@ -1,5 +1,5 @@
-defmodule CommunityWeb.ErrorView do
-  use CommunityWeb, :view
+defmodule Community.Web.ErrorView do
+  use Community.Web, :view
 
   def render("404.json", _assigns) do
     %{errors: %{detail: "Page not found"}}

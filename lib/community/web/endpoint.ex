@@ -1,7 +1,7 @@
-defmodule CommunityWeb.Endpoint do
+defmodule Community.Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :community
 
-  socket "/socket", CommunityWeb.UserSocket
+  socket "/socket", Community.Web.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -36,7 +36,7 @@ defmodule CommunityWeb.Endpoint do
     key: "_community_key",
     signing_salt: "D5S/qGf9"
 
-  plug CommunityWeb.Router
+  plug Community.Web.Router
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.

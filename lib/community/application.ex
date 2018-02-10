@@ -11,7 +11,7 @@ defmodule Community.Application do
       # Start the Ecto repository
       supervisor(Community.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(CommunityWeb.Endpoint, []),
+      supervisor(Community.Web.Endpoint, []),
       # Start your own worker by calling: Community.Worker.start_link(arg1, arg2, arg3)
       # worker(Community.Worker, [arg1, arg2, arg3]),
     ]
@@ -25,7 +25,7 @@ defmodule Community.Application do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    CommunityWeb.Endpoint.config_change(changed, removed)
+    Community.Web.Endpoint.config_change(changed, removed)
     :ok
   end
 end

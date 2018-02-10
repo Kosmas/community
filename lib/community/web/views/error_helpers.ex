@@ -1,4 +1,4 @@
-defmodule CommunityWeb.ErrorHelpers do
+defmodule Community.Web.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -21,9 +21,9 @@ defmodule CommunityWeb.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(CommunityWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(Community.Web.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(CommunityWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(Community.Web.Gettext, "errors", msg, opts)
     end
   end
 end

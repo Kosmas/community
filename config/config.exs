@@ -10,10 +10,10 @@ config :community,
   ecto_repos: [Community.Repo]
 
 # Configures the endpoint
-config :community, CommunityWeb.Endpoint,
+config :community, Community.Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "WK1nUCaLxOf3fQW3RA8XnQwIl8tNw6m78oJuTc7JZaZhWunSrU+swZGu6iPuYNAi",
-  render_errors: [view: CommunityWeb.ErrorView, accepts: ~w(json)],
+  render_errors: [view: Community.Web.ErrorView, accepts: ~w(json)],
   pubsub: [name: Community.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
